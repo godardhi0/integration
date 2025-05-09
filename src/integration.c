@@ -7,6 +7,7 @@ typedef struct integration
 	double a,b,dx;
 	double area_left;
 	double area_right;
+	
 }Rieman_over;
 
 double _sin_function(double x)
