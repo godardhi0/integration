@@ -18,11 +18,18 @@ double _linear_function(double varaible, const double angular, const double cons
 {
 	return angular * varaible  + constant;	
 }
-double _sin_function(double x)
+
+/*
+double _sin_function(double varaible, const double constant)
 {
-	return tan(x);
+	return tan(varaible);
 }
 
+double _non_linear_function(char *expresssion)
+{
+
+}
+*/
 double _abs(double a, double b)
 {
 	double abs_ab = a - b;
@@ -48,7 +55,7 @@ void _constant_dx(Rieman_over *_linear, Rieman_over *_non_linear,const double an
 	 for (int i = 0; i < dx; i++) {
         double x = a + i * _linear->width;
         _linear->area_left += _linear_function(x, angular, constant) * _linear->width;
-		_non_linear->area_left += _sin_function(x) * _non_linear->width;
+		/*_non_linear->area_left += _sin_function(x) * _non_linear->width; */
     }
 
 	
@@ -57,7 +64,7 @@ void _constant_dx(Rieman_over *_linear, Rieman_over *_non_linear,const double an
     for (int i = 1; i <= dx; i++) {
 		double x = a + i * _linear->width;
 		_linear->area_right += _linear_function(x, angular, constant) * _linear->width;
-		_non_linear->area_right += _sin_function(x) * _non_linear->width;
+		/*_non_linear->area_right += _sin_function(x) * _non_linear->width;*/
     }
 
 	
