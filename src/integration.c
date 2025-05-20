@@ -5,7 +5,7 @@
 #define PI 3.14159265358979323846
 #define m 2
 #define k 2
-#define dx 1000000000 // precison =  0.0000000005
+#define dx 1000000000 // precision =  0.0000000001
 
 #define CREATE_coef_degre(...) (double[]){ __VA_ARGS__}
 
